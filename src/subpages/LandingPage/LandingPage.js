@@ -1,5 +1,4 @@
 import React from "react"
-import Navbar from "../../components/Navbar"
 import { useStaticQuery, graphql } from "gatsby"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
@@ -35,10 +34,6 @@ function LandingPage() {
       </div>
 
       <div className={landingPageModule.opac} />
-
-      <div className={landingPageModule.container}>
-        <Navbar />
-      </div>
       <h1 className={`glitch ${landingPageModule.title}`} data-text="XO Blacc">{welcomeText}</h1>
 
       <AnchorLink href='#services' className={landingPageModule.mouseblock}>

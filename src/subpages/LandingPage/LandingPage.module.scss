@@ -38,19 +38,24 @@
 }
 
 .title {
-  transform: translate(10%, -500%);
+  // transform: translate(10%, -500%);
+  // transform: translate(1.5rem, 750%);
   font-size: $fs-big;
+  top: 65vh;
+  left: 15vw;
 
   @include bp(tablet) {
     font-size: $fs-big + $fs-xs;
   }
 
   @include bp(desktop) {
+    // transform: translate(1.5rem, 500%);
     font-size: $fs-big + $fs-m;
   }
 
   @include bp(lg-screen) {
     font-size: $fs-huge;
+    // transform: translate(1.5rem, 250%);
   }
 }
 

@@ -1,0 +1,46 @@
+@import '../../assets/styles/abstracts/vars';
+@import '../../assets/styles/abstracts/mixin';
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 4rem;
+  height: .3rem;
+  background-color: $color-black;
+  margin: .6rem 0;
+  transition: .2s;
+}
+
+.change {
+  .bar1 { transform: rotate(-45deg) translate(-.5rem, .4rem); }
+  .bar2 { opacity: 0; transform: translateX(-5rem);}
+  .bar3 { transform: rotate(45deg) translate(-.8rem, -.8rem); }
+}
+
+.burger {
+  position: fixed;
+  z-index: 20;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.opend {
+  overflow: hidden;
+}
+
+.nav {
+  position: fixed;
+  max-height: 0;
+  overflow: hidden;
+  transition: .2s;
+  background-color: $color-white;
+  z-index: 10;
+  width: 100%;
+  top: 50%;
+}
+
+.navOpen {
+  max-height: 100%;
+  height: 100%;
+  top: 0;
+}
