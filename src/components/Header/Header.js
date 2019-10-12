@@ -1,5 +1,5 @@
 import React from "react"
-// import AnchorLink from 'react-anchor-link-smooth-scroll'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 import HeaderModule from './Header.module.scss'
 
@@ -7,7 +7,8 @@ function Header() {
   const onClickOpenMenu = () =>  {
     document.querySelector(`.js-navMenu`).classList.toggle(`${HeaderModule.change}`)
     document.querySelector(`body`).classList.toggle(`${HeaderModule.opend}`)
-    document.querySelector(`.${HeaderModule.nav}`).classList.toggle(`${HeaderModule.navOpen}`)
+    document.querySelector(`.${HeaderModule.backMenu}`).classList.toggle(`${HeaderModule.navOpen}`)
+    document.querySelector(`.${HeaderModule.nav}`).classList.toggle(`${HeaderModule.navMenuOpen}`)
   }
 
   return (
@@ -18,11 +19,12 @@ function Header() {
         <div className={`${HeaderModule.bar3}`}></div>
       </div>
 
+      <div className={HeaderModule.backMenu} />
       <nav className={HeaderModule.nav}>
-        <ul>
-          <li>test</li>
-          <li>test2</li>
-          <li>test3</li>
+        <ul className={HeaderModule.ul}>
+          <li><AnchorLink href='#services' onClick={onClickOpenMenu}>Services</AnchorLink></li>
+          <li><AnchorLink href='#team' onClick={onClickOpenMenu}>Team</AnchorLink></li>
+          <li><AnchorLink href='#contact' onClick={onClickOpenMenu}>Contact Us!</AnchorLink></li>
         </ul>
       </nav>
     </header>
