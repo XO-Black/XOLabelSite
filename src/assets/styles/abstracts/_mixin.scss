@@ -1,0 +1,11 @@
+@import './vars';
+
+@mixin bp($point) {
+  @if $point == tablet {
+    @media (min-width: $bp-tablet) { @content ; }
+  } @else if $point == desktop {
+    @media (min-width: $bp-desktop) { @content ; }
+  } @else if $point == lg-screen {
+    @media (min-width: $bp-screen)  { @content ; }
+  }
+}
